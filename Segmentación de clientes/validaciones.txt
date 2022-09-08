@@ -1,0 +1,48 @@
+RETIRO_EFECTIVO_CAJERO_AUTOMATICO:
+●	Cliente Classic: solo se le permite retirar hasta un máximo de $10.000 diarios por cajero. Si tiene dinero en el banco 
+○	Si  monto <= cupoDiarioRestate and saldoEnCuenta >= monto Aprobado sino Error “Máximo 10k diarios o no tienes los fondos suficientes”.
+●	Cliente gold: Tiene un máximo de $20.000 por día puede tener $10.000 negativos. Si tiene dinero en el banco
+○	Si monto <= cupoDiarioRestate and saldoEnCuenta >= monto  aprobado sino Error “Máximo 20k diarios o no tienes los fondos suficientes.”
+●	Cliente Black: Pueden extraer hasta $100.000 por día puede tener $10.000 negativos. Si tiene dinero en el banco
+○	Si monto <= cupoDiaarioRestate and saldoEnCuenta >= monto aprobado sino Error “Máximo 100k diarios o no tienes los fondos suficientes”
+
+ALTA_TARJETA_CREDITO: 
+●	Cliente Classic Rechazado
+○	Si tipo == Classic rechazado “No puedes tener”
+●	Cliente Gold solo puede tener 1
+○	Si tipo == Gold and totaltarjetasdecredito <1 aprobado sino rechazado “Solo puedes 1 tarjeta”
+●	Cliente Black: hasta 5 tarjetas de crédito.
+○	Si tipo == Black and totaltarjetasdecredito <5 aprobado sino rechazado “Solo puedes 5  tarjetas”
+
+ALTA_CHEQUERA:
+●	Cliente Classic Rechazado
+○	si tipo == classic rechazado no puedes tener chequeras
+●	Cliente Gold solo puede tener 1
+○	Si tipo == gold and totalChequerasActualmente < 1 aprobado sino rechazado “No puedes tener mas 1 chequera”
+●	Cliente black: puede tener hasta 2
+○	Si tipo == Black and totalChequerasActualmente < 5 aprobado sino rechazado por superar el límite
+
+COMPRAR_DOLAR:
+●	Cliente Classic Rechazado
+○	si tipo == classic rechazado porque no puede tener.
+●	Cliente Gold Puede comprar dólares. Si tiene dinero en el banco.
+○	Si tipo == Gold or Black and saldo Cuenta > monto de dólares a comprar 
+●	Cliente Black: Puede comprar dólares.Si tiene dinero en el banco.
+○	Si tipo == Gold or Black and Sí saldo Cuenta > monto de dólares a comprar 
+
+
+TRANSFERENCIA_ENVIADA:
+●	Cliente Classic: La comisión por transferencias hechas es de 1%.Si tiene dinero en el banco
+○	Si saldoEnCuenta  >= monto + 1% entonces aprobada
+●	Cliente Gold: La comisión por transferencias hechas es del 0.5%. Si tiene dinero en el banco
+○	Si saldoEnCuenta  >= monto + 0.5% entonces aprobada
+●	Cliente Black: No se aplican transferencias. Si tiene dinero en el banco
+○	Si saldoEnCuenta >= montó entonces aprobada
+
+TRANSFERENCIA_RECIBIDA:
+●	Cliente Classic no puede recibir transferencias mayores a $150.000 sin previo aviso.
+○	Sin aviso monto <= $150.000 
+●	Cliente Gold no puede recibir transferencias mayores a $500.000 sin previo aviso
+○	Sin aviso monto <= $500.000 
+●	Cliente Black: Pueden recibir transferencias por cualquier monto sin previa autorización.
+○	No hay condición

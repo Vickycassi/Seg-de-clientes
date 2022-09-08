@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <title>Reporte ITBANK</title>
+  </head>
+  <body>
+  <div class="content">   
+    <div class="container">
+      <h1 class="mb-5">Reporte Transacciones - ITBANK</h1>
+      <div class="container">
+        <table class="table custom-table">
+            <thead>
+              <tr>  
+                <th scope="col">Nombre</th>
+                <th scope="col">Número</th>
+                <th scope="col">DNI</th>
+                <th scope="col">Dirección</th> 
+              </tr>
+            </thead>
+            <tbody>
+                <tr scope="row">
+                  <td>Nicolas1</td>
+                  <td>100001</td>
+                  <td>29494777</td>
+                  <td>Rivadavia N° 7900, Capital Federal, Buenos Aires, Argentina</td>
+                </tr>
+            </table>
+      </div>
+      <div class="table-responsive custom-table-responsive">
+        <table class="table custom-table">
+            <h2 style="margin-top:20px;margin-bottom:20px" >Historial de Transacciones</h2>
+            <h3>Cliente Classic</h2>
+          <thead>
+            <tr>  
+              <th scope="col">Estado</th>
+              <th scope="col">Tipo</th>
+              <th scope="col">Monto</th>
+              <th scope="col">Fecha</th>
+              <th scope="col">Numero</th>
+              <th scope="col">Razón Rechazo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr scope="row">
+              <tr><td>RECHAZADA</td><td>RETIRO_EFECTIVO_CAJERO_AUTOMATICO</td><td>11000</td><td>20/06/2022 17:00:55</td><td>2</td><td>Excede el monto de máximo de $10000</td></tr><tr class="spacer"></tr><tr><td>RECHAZADA</td><td>RETIRO_EFECTIVO_CAJERO_AUTOMATICO</td><td>9000</td><td>20/06/2022 18:00:55</td><td>3</td><td>La cantidad supera el cupo diario de retiros, puede retirar hasta $3000. </td></tr><tr class="spacer"></tr><tr><td>RECHAZADA</td><td>RETIRO_EFECTIVO_CAJERO_AUTOMATICO</td><td>9000</td><td>21/06/2022 10:11:11</td><td>4</td><td>La cantidad supera el cupo diario de retiros, puede retirar hasta $3000. </td></tr><tr class="spacer"></tr><tr><td>RECHAZADA</td><td>ALTA_TARJETA_CREDITO</td><td>9000</td><td>22/06/2022 16:00:55</td><td>5</td><td>El cliente no puede crear tarjetas de crédito</td></tr><tr class="spacer"></tr><tr><td>RECHAZADA</td><td>ALTA_CHEQUERA</td><td>9000</td><td>23/06/2022 16:00:55</td><td>6</td><td>El cliente no puede crear chequeras</td></tr><tr class="spacer"></tr><tr><td>RECHAZADA</td><td>COMPRA_DOLAR</td><td>9000</td><td>24/06/2022 16:00:55</td><td>7</td><td>No puede realizar la compra porque el monto de $9000 supera elsaldo de la cuenta</td></tr><tr class="spacer"></tr><tr><td>RECHAZADA</td><td>TRANSFERENCIA_ENVIADA</td><td>100000</td><td>25/06/2022 16:00:55</td><td>8</td><td>El monto $100000 supera el saldo de la cuenta</td></tr><tr class="spacer"></tr><tr><td>RECHAZADA</td><td>TRANSFERENCIA_RECIBIDA</td><td>200000</td><td>25/06/2022 16:00:55</td><td>10</td><td>No puede recibir un monto de $200000 sin previo sin aviso</td></tr><tr class="spacer"></tr>
+            </tr>
+            <tr class="spacer"></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
